@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact Us - Plantique Nudge Irrigation Services</title>
+<meta name="description" content="Contact Plantique Nudge Irrigation Services. Reach out for expert help, support, service inquiries, and more." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<!-- Google Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<style>
+  /* Reset and base */
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    background: #f4fbff;
+    color: #374151;
+    font-family: 'Inter', sans-serif;
+  }
+  body {
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  a {
+    color: #0284c7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: #0369a1;
+    outline: none;
+  }
+  img {
+    max-width: 100%;
+    border-radius: 12px;
+    display: block;
+  }
+  .container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  header {
+    background: #e0f4ff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #bae6fd;
+    box-shadow: 0 2px 6px rgba(6, 95, 161, 0.1);
+  }
+  .nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+  }
+  .logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #0369a1;
+    letter-spacing: 1.2px;
+    user-select: none;
+  }
+  nav {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+  nav a {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 4px;
+    display: inline-flex;
+    align-items: center;
+  }
+  nav a:focus-visible {
+    outline: 2px solid #0284c7;
+    outline-offset: 3px;
+  }
+  nav a.active {
+    color: #035375;
+    font-weight: 800;
+    border-bottom: 2px solid #0284c7;
+  }
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #0369a1;
+  }
+  @media (max-width: 767px) {
+    nav {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: #e0f4ff;
+      flex-direction: column;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      box-shadow: 0 2px 8px rgba(6, 95, 161, 0.15);
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+      z-index: 1001;
+      padding-bottom: 0;
+    }
+    nav.open {
+      max-height: 400px;
+      padding-bottom: 16px;
+    }
+    nav a {
+      display: block;
+      margin: 12px auto;
+      text-align: center;
+    }
+    .hamburger {
+      display: block;
+    }
+  }
+  .hero {
+    position: relative;
+    background: linear-gradient(135deg, #b0defa 0%, #0284c7 100%);
+    color: white;
+    padding: 120px 20px 150px;
+    overflow: hidden;
+    text-align: center;
+  }
+  .hero h1 {
+    font-weight: 900;
+    font-size: 3rem;
+    max-width: 900px;
+    margin: 0 auto 24px;
+    line-height: 1.1;
+    text-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  }
+  .hero p {
+    font-size: 1.5rem;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-weight: 600;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.25);
+  }
+  .btn-primary {
+    background: #0369a1;
+    color: white;
+    padding: 16px 40px;
+    font-weight: 700;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(3,105,161,0.5);
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  .btn-primary:hover, .btn-primary:focus {
+    background: #024f79;
+    transform: translateY(-4px);
+    outline: none;
+  }
+  .wave-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: translateZ(0);
+    height: 160px;
+  }
+  .wave {
+    position: relative;
+    display: block;
+    width: 200%;
+    height: 160px;
+    background: url('https://www.svgrepo.com/show/43155/waves.svg') repeat-x bottom;
+    animation: waveAnimation 15s linear infinite;
+    transform-origin: center bottom;
+    opacity: 0.6;
+  }
+  .wave2 {
+    bottom: 20px;
+    animation-duration: 20s;
+    opacity: 0.4;
+    filter: blur(2px);
+  }
+  .wave3 {
+    bottom: 40px;
+    animation-duration: 25s;
+    opacity: 0.25;
+    filter: blur(3px);
+  }
+  @keyframes waveAnimation {
+    0% { transform: translateX(0) scaleY(1); }
+    50% { transform: translateX(-25%) scaleY(1.05); }
+    100% { transform: translateX(-50%) scaleY(1); }
+  }
+  main {
+    flex-grow: 1;
+    background: white;
+    max-width: 900px;
+    margin: 0 auto 100px;
+    padding: 60px 20px 80px;
+  }
+  h2, h3 {
+    color: #0369a1;
+    font-weight: 800;
+    margin-top: 48px;
+    margin-bottom: 20px;
+  }
+  p {
+    margin-bottom: 20px;
+    text-align: justify;
+    font-weight: 400;
+    font-size: 1.05rem;
+  }
+  ol {
+    padding-left: 24px;
+  }
+  ol li {
+    margin-bottom: 24px;
+  }
+  footer {
+    background: #0369a1;
+    color: white;
+    padding: 32px 20px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  footer .material-icons {
+    vertical-align: middle;
+    font-size: 2rem;
+    margin-right: 8px;
+    color: #ffe;
+  }
+  button:focus-visible,
+  a:focus-visible {
+    outline-offset: 3px;
+    outline-color: #0284c7;
+  }
+  .text-size-controls {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    z-index: 1100;
+  }
+  .text-size-controls button {
+    background: #0284c7;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1.25rem;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.3s ease;
+  }
+  .text-size-controls button:hover,
+  .text-size-controls button:focus-visible {
+    background: #035375;
+    outline: 2px solid #0369a1;
+  }
+  @media (max-width: 767px) {
+    .hero h1 {
+      font-size: 2.25rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header role="banner">
+  <div class="container nav-inner">
+    <div class="logo" aria-label="Plantique Nudge Irrigation Logo">Plantique Nudge Irrigation</div>
+    <button class="hamburger" aria-label="Toggle navigation menu" aria-controls="primary-navigation" aria-expanded="false">
+      <span class="material-icons">menu</span>
+    </button>
+    <nav role="navigation" aria-label="Primary navigation" id="primary-navigation">
+  <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0"aria-current="page">Contact us</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Contact Us</h1>
+  <p>We are here to assist you with any inquiries, support needs, or feedback. Reach out to us using the information below or via the contact points described in this detailed overview.</p>
+  <div class="wave-wrapper" aria-hidden="true">
+    <span class="wave"></span>
+    <span class="wave wave2"></span>
+    <span class="wave wave3"></span>
+  </div>
+</section>
+
+<main>
+  <p><strong>Welcome to Plantique Nudge Irrigation's Contact Information and Support Overview.</strong> Our goal is to provide outstanding customer service while ensuring open and clear communication.</p>
+
+  <ol>
+    <li>
+      <h3>Customer Support Channels</h3>
+      <p>Our customer support is available through phone, email, and online chat during business hours. We encourage you to contact us through your preferred method for assistance with products, services, or any questions you may have.</p>
+      <p>Our trained staff strives to resolve issues promptly and professionally to keep your irrigation systems running smoothly.</p>
+    </li>
+
+      <h2>Contact Form</h2>
+  <form action="submit_form.php" method="POST">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+    </div>
+    <div>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+    <div>
+      <button type="submit" class="btn-primary">Send Message</button>
+    </div>
+  </form>
+    
+    <li>
+      <h3>Technical Assistance</h3>
+      <p>For technical problems with your irrigation system, our support team provides detailed guidance to help troubleshoot, diagnose, and resolve issues. We also offer remote assistance and on-site visits for complex problems.</p>
+      <p>Our technicians are experienced with the latest nudge technology and smart irrigation solutions.</p>
+    </li>
+
+    <li>
+      <h3>Sales Inquiries</h3>
+      <p>If you are interested in purchasing our irrigation solutions or upgrading existing systems, you can contact our sales representatives to get product information, pricing details, and personalized quotes.</p>
+      <p>We offer tailored packages for farms of all sizes to maximize water efficiency and crop yield.</p>
+    </li>
+
+    <li>
+      <h3>Installation Services</h3>
+      <p>Our qualified installation team schedules and coordinates site visits to professionally set up your irrigation system according to your farm’s specific requirements.</p>
+      <p>We ensure minimal disruption and provide thorough orientation to help you operate your system confidently.</p>
+    </li>
+
+    <li>
+      <h3>Consultation Services</h3>
+      <p>We offer expert consulting to design sustainable irrigation strategies that incorporate behavioral nudges and smart technology to reduce water waste.</p>
+      <p>Our consultants work closely with you to optimize crop performance while conserving resources.</p>
+    </li>
+
+    <li>
+      <h3>Maintenance Contracts</h3>
+      <p>Scheduling regular maintenance is crucial for system longevity and performance. We provide maintenance plans that include inspection, calibration, and repair services as needed.</p>
+      <p>Our goal is proactive upkeep to prevent breakdowns and maximize efficiency.</p>
+    </li>
+
+    <li>
+      <h3>Product Manuals and Documentation</h3>
+      <p>Comprehensive manuals, user guides, and installation documents are available online or upon request to assist you with system operation and troubleshooting.</p>
+      <p>These resources empower you to fully understand and utilize our irrigation technology.</p>
+    </li>
+
+    <li>
+      <h3>Warranty and Returns</h3>
+      <p>Details on product warranties, what they cover, and how to initiate a warranty claim or product return are available through our support channels.</p>
+      <p>We stand behind the quality and reliability of our equipment and services.</p>
+    </li>
+
+    <li>
+      <h3>Emergency Support</h3>
+      <p>For urgent issues affecting your irrigation system, we provide emergency contact options to ensure quick response and minimize downtime.</p>
+      <p>Immediate assistance helps protect your crops and investment.</p>
+    </li>
+
+    <li>
+      <h3>Feedback and Complaints</h3>
+      <p>Your feedback is valuable. We encourage you to share your experience, suggestions, or concerns to help us improve our products and services.</p>
+      <p>Complaints are handled with confidentiality, fairness, and timely communication.</p>
+    </li>
+
+    <li>
+      <h3>Training and Workshops</h3>
+      <p>We offer training sessions and workshops for farmers and technicians to maximize the benefits of nudge irrigation technology.</p>
+      <p>Learn hands-on techniques and software usage to improve irrigation management.</p>
+    </li>
+
+    <li>
+      <h3>Account Management</h3>
+      <p>Manage your user account, subscription details, service preferences, and communication settings via our secure online portal or with assistance from our support team.</p>
+      <p>Keeping your account details accurate ensures uninterrupted service.</p>
+    </li>
+
+    <li>
+      <h3>Technical Specifications Requests</h3>
+      <p>We provide detailed technical specifications and data sheets for our products upon request to support decision-making and integration planning.</p>
+      <p>Our experts can clarify any technical questions you may have.</p>
+    </li>
+
+    <li>
+      <h3>Software Updates and Notifications</h3>
+      <p>Stay informed about software updates, new features, and security patches through our notification system.</p>
+      <p>This ensures your system benefits from continuous improvements and protection.</p>
+    </li>
+
+    <li>
+      <h3>Privacy and Data Security Questions</h3>
+      <p>Contact us for questions regarding privacy, data collection, and our compliance with data protection regulations.</p>
+      <p>We prioritize safeguarding your personal and farm data.</p>
+    </li>
+
+    <li>
+      <h3>Billing and Invoice Support</h3>
+      <p>Our billing support team assists with invoicing questions, payment methods, and resolving any discrepancies.</p>
+      <p>Clear and transparent billing helps maintain trust and smooth business relations.</p>
+    </li>
+
+    <li>
+      <h3>Customized Solution Requests</h3>
+      <p>If you have unique irrigation requirements or need tailored technology solutions, our specialists can design and propose custom configurations.</p>
+      <p>We collaborate to meet the specific needs of your agricultural operations.</p>
+    </li>
+
+    <li>
+      <h3>Environmental Impact Inquiries</h3>
+      <p>We are committed to sustainability. For questions about environmental benefits or certifications of our products and services, please reach out.</p>
+      <p>Learn how we help conserve water and support eco-friendly farming.</p>
+    </li>
+
+    <li>
+      <h3>Partnership Opportunities</h3>
+      <p>Businesses or organizations interested in collaboration, distribution, or partnership can contact our business development team.</p>
+      <p>Together, we can expand access to smart irrigation technology.</p>
+    </li>
+
+    <li>
+      <h3>Job and Career Inquiries</h3>
+      <p>Contact us for current job openings, internship opportunities, or to submit resumes and inquiries related to careers at Plantique Nudge Irrigation.</p>
+      <p>Join us in advancing sustainable agriculture.</p>
+    </li>
+
+    <li>
+      <h3>Media and Press Relations</h3>
+      <p>Media inquiries, press kits, and official statements can be requested through our communications team.</p>
+      <p>We welcome constructive media engagement on our products and mission.</p>
+    </li>
+
+    <li>
+      <h3>Community Engagement</h3>
+      <p>Learn about our community programs, local projects, and how you can participate or support sustainable agriculture initiatives.</p>
+      <p>We value close collaboration with farming communities.</p>
+    </li>
+
+    <li>
+      <h3>Product Demonstrations</h3>
+      <p>Schedule a live or virtual demo of our irrigation solutions to see their features in action and evaluate suitability for your needs.</p>
+      <p >Experience firsthand how our technology works.</p>
+    </li>
+
+    <li>
+      <h3>Warranty Registration and Information</h3>
+      <p>Register your product warranty online or contact support for details regarding coverage and claims processes.</p>
+      <p>We ensure customer protection through our warranty programs.</p>
+    </li>
+
+    <li>
+      <h3>User Manual Access</h3>
+      <p>Access current and detailed user manuals, installation guides, and FAQs on our website or by request to aid system operation.</p>
+      <p>Empowering you with knowledge maximizes your system’s performance.</p>
+    </li>
+
+    <li>
+      <h3>Feedback on Website Experience</h3>
+      <p>Provide feedback on our website usability, content, and design to help us improve your browsing experience.</p>
+      <p>Your input shapes our digital presence.</p>
+    </li>
+  </ol>
+
+
+</main>
+
+<footer role="contentinfo">
+  <p class="address" aria-label="Address of Plantique Nudge Irrigation">
+    <span class="material-icons" aria-hidden="true">place</span>
+    East 14th Street, New York, NY 10003, United States
+  </p>
+  <p class="phone" aria-label="Phone number of Plantique Nudge Irrigation">
+    <span class="material-icons" aria-hidden="true">phone</span>
+    +1 (844) 557-9898
+  </p>
+</footer>
+
+<div class="text-size-controls" role="region" aria-label="Text size controls for reading">
+  <button id="decrease-text" aria-label="Decrease text size">A−</button>
+  <button id="reset-text" aria-label="Reset text size to default">A</button>
+  <button id="increase-text" aria-label="Increase text size">A+</button>
+</div>
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('nav');
+  hamburger.addEventListener('click', () => {
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+    hamburger.setAttribute('aria-expanded', !expanded);
+    navMenu.classList.toggle('open');
+  });
+
+  const contentArea = document.querySelector('main');
+  let currentFontSize = 16;
+  function setFontSize(size) {
+    if (size < 12) size = 12;
+    if (size > 24) size = 24;
+    currentFontSize = size;
+    const paras = contentArea.querySelectorAll('p, li, dd, dt, h1, h2, h3, h4');
+    paras.forEach(el => el.style.fontSize = size + 'px');
+  }
+  document.getElementById('increase-text').addEventListener('click', () => {
+    setFontSize(currentFontSize + 2);
+  });
+  document.getElementById('decrease-text').addEventListener('click', () => {
+    setFontSize(currentFontSize - 2);
+  });
+  document.getElementById('reset-text').addEventListener('click', () => {
+    setFontSize(16);
+  });
+  setFontSize(16);
+</script>
+</body>
+</html>

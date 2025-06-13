@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cookies Policy - Plantique Nudge Irrigation Services</title>
+  <meta name="description" content="Learn about the cookies used by Plantique Nudge Irrigation, how they impact your experience, and how to manage your cookie preferences." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+      background: #f4fbff;
+      color: #374151;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 120px; /* space for cookie banner */
+    }
+    a {
+      color: #0284c7;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover, a:focus {
+      color: #0369a1;
+      outline: none;
+    }
+    .container {
+      max-width: 1200px;
+      width: 90%;
+      margin: 0 auto;
+    }
+    header {
+      background: #e0f4ff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #bae6fd;
+      box-shadow: 0 2px 6px rgba(6, 95, 161, 0.1);
+    }
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #0369a1;
+      letter-spacing: 1.2px;
+      user-select: none;
+    }
+    nav {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+    nav a {
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 8px 4px;
+      display: inline-flex;
+      align-items: center;
+    }
+    nav a:focus-visible {
+      outline: 2px solid #0284c7;
+      outline-offset: 3px;
+    }
+    nav a.active {
+      color: #035375;
+      font-weight: 800;
+      border-bottom: 2px solid #0284c7;
+    }
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: #0369a1;
+    }
+    @media (max-width: 767px) {
+      nav {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: #e0f4ff;
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        box-shadow: 0 2px 8px rgba(6, 95, 161, 0.15);
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        z-index: 1001;
+        padding-bottom: 0;
+      }
+      nav.open {
+        max-height: 400px;
+        padding-bottom: 16px;
+      }
+      nav a {
+        display: block;
+        margin: 12px auto;
+        text-align: center;
+      }
+      .hamburger {
+        display: block;
+      }
+    }
+    .hero {
+      position: relative;
+      background: linear-gradient(135deg, #b0defa 0%, #0284c7 100%);
+      color: white;
+      padding: 120px 20px 150px;
+      overflow: hidden;
+      text-align: center;
+    }
+    .hero h1 {
+      font-weight: 900;
+      font-size: 3rem;
+      max-width: 900px;
+      margin: 0 auto 24px;
+      line-height: 1.1;
+      text-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    }
+    .hero p {
+      font-size: 1.5rem;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      font-weight: 600;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.25);
+    }
+    main {
+      flex-grow: 1;
+      background: white;
+      max-width: 900px;
+      margin: 0 auto 100px;
+      padding: 60px 20px 80px;
+    }
+    h2, h3 {
+      color: #0369a1;
+      font-weight: 800;
+      margin-top: 48px;
+      margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 20px;
+      text-align: justify;
+      font-weight: 400;
+      font-size: 1.05rem;
+    }
+    ol {
+      padding-left: 24px;
+    }
+    ol li {
+      margin-bottom: 24px;
+    }
+    footer {
+      background: #0369a1;
+      color: white;
+      padding: 32px 20px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.1rem;
+      position: relative;
+      z-index: 1;
+    }
+    footer .material-icons {
+      vertical-align: middle;
+      font-size: 2rem;
+      margin-right: 8px;
+      color: #ffe;
+    }
+    button:focus-visible,
+    a:focus-visible {
+      outline-offset: 3px;
+      outline-color: #0284c7;
+    }
+    .text-size-controls {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: white;
+      border-radius: 30px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      z-index: 1100;
+    }
+    .text-size-controls button {
+      background: #0284c7;
+      border: none;
+      color: white;
+      font-weight: 700;
+      font-size: 1.25rem;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      line-height: 36px;
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.3s ease;
+    }
+    .text-size-controls button:hover,
+    .text-size-controls button:focus-visible {
+      background: #035375;
+      outline: 2px solid #0369a1;
+    }
+    /* Cookie Consent Dialog */
+    .cookie-consent {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: rgba(255 255 255 / 0.95);
+      box-shadow: 0 -4px 12px rgba(0,0,0,0.2);
+      padding: 16px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 1rem;
+      z-index: 1200;
+    }
+    .cookie-consent p {
+      flex: 1 1 60%;
+      margin-right: 16px;
+      color: #374151;
+    }
+    .cookie-consent button {
+      background-color: #0284c7;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      padding: 10px 20px;
+      margin-left: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .cookie-consent button:hover, .cookie-consent button:focus {
+      background-color: #035375;
+      outline: none;
+    }
+    .cookie-consent button.decline {
+      background-color: #6b7280;
+    }
+    .cookie-consent button.decline:hover, .cookie-consent button.decline:focus {
+      background-color: #4b5563;
+    }
+    @media (max-width: 640px) {
+      .cookie-consent {
+        flex-direction: column;
+        text-align: center;
+      }
+      .cookie-consent p {
+        margin-bottom: 16px;
+        margin-right: 0;
+      }
+      .cookie-consent button {
+        margin-left: 0;
+        margin-right: 8px;
+        width: 120px;
+      }
+    }
+    @keyframes waveAnimation {
+      0% { transform: translateX(0) scaleY(1); }
+      50% { transform: translateX(-25%) scaleY(1.05); }
+      100% { transform: translateX(-50%) scaleY(1); }
+    }
+  </style>
+</head>
+<body>
+<header role="banner">
+  <div class="container nav-inner">
+    <div class="logo" aria-label="Plantique Nudge Irrigation Logo">Plantique Nudge Irrigation</div>
+    <button class="hamburger" aria-label="Toggle navigation menu" aria-controls="primary-navigation" aria-expanded="false">
+      <span class="material-icons">menu</span>
+    </button>
+    <nav role="navigation" aria-label="Primary navigation" id="primary-navigation">
+     <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0"aria-current="page">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Cookies Policy</h1>
+  <p>Understand how Plantique Nudge Irrigation uses cookies and your options for managing them.</p>
+  <div class="wave-wrapper" aria-hidden="true">
+    <span class="wave"></span>
+    <span class="wave wave2"></span>
+    <span class="wave wave3"></span>
+  </div>
+</section>
+
+<main>
+  <p><strong>Effective Date:</strong> August 31, 2024</p>
+  <p>This Cookies Policy explains what cookies are, how we use them, the types of cookies we use, and your choices about managing cookies when you access Plantique Nudge Irrigation's website and services.</p>
+  
+  <ol>
+    <li>
+      <h3>What Are Cookies?</h3>
+      <p>Cookies are small text files stored on your device by websites you visit. They help websites recognize your device and remember your preferences or actions. Cookies enhance your browsing experience, providing functionality and personalized content.</p>
+    </li>
+
+    <li>
+      <h3>Why We Use Cookies</h3>
+      <p>We use cookies to make our website work properly, improve your experience, analyze usage to enhance performance, and deliver relevant advertising. Cookies also help protect security and detect fraudulent activities.</p>
+    </li>
+
+    <li>
+      <h3>Types of Cookies We Use - Essential Cookies</h3>
+      <p>Essential cookies enable core website functions like user authentication and security features. Without these cookies, some services may not work properly.</p>
+    </li>
+
+    <li>
+      <h3>Types of Cookies We Use - Performance Cookies</h3>
+      <p>Performance cookies collect information on how you use the website, including pages visited and errors encountered, helping us optimize site functionality and user experience.</p>
+    </li>
+
+    <li>
+      <h3>Types of Cookies We Use - Functionality Cookies</h3>
+      <p>Functionality cookies store your preferences like language choice or region, enabling personalized experiences during future visits.</p>
+    </li>
+
+    <li>
+      <h3>Types of Cookies We Use - Advertising Cookies</h3>
+      <p>Advertising cookies deliver relevant ads either on our site or across the internet based on your interests. These help us support our services financially while showing more useful promotions.</p>
+    </li>
+
+    <li>
+      <h3>Third-Party Cookies</h3>
+      <p>We use third-party services that may set cookies on your device for analytics, advertising, or social media functionality. These are governed by third-party privacy policies, and we encourage you to review them.</p>
+    </li>
+
+    <li>
+      <h3>How Long Cookies Remain</h3>
+      <p>Cookies can be session-based, deleted when you close your browser, or persistent, remaining for a set period. Duration varies by cookie type and purpose.</p>
+    </li>
+
+    <li>
+      <h3>Managing Cookies</h3>
+      <p>You can manage or disable cookies through your browser settings. Note that restricting cookies may affect website functionality or your user experience.</p>
+    </li>
+
+    <li>
+      <h3>Consent and Cookie Control</h3>
+      <p>We seek your consent to store non-essential cookies via a cookie consent banner. You can accept or decline these cookies and change your preferences later using site controls.</p>
+    </li>
+
+    <li>
+      <h3>How We Use Analytics Cookies</h3>
+      <p>Analytics cookies help us understand website traffic and user behavior anonymously, assisting in ongoing website and service improvements.</p>
+    </li>
+
+    <li>
+      <h3>Why We Use Advertising Cookies</h3>
+      <p>These cookies help tailor advertisement content to your interests and measure campaign effectiveness to build better marketing strategies.</p>
+    </li>
+
+    <li>
+      <h3>Impact of Disabling Cookies</h3>
+      <p>Disabling some or all cookies can reduce website performance or limit access to some services; however, essential cookies cannot be disabled as they are necessary for core functions.</p>
+    </li>
+
+    <li>
+      <h3>Browser Settings for Cookies</h3>
+      <p>Most browsers allow you to delete or block cookies. Instructions vary by browser type. Adjusting settings here controls cookies for all websites you visit.</p>
+    </li>
+
+    <li>
+      <h3>Do Not Track Signals</h3>
+      <p>Our website currently does not respond to Do Not Track signals from browsers due to lack of industry consensus, but we respect user privacy decisions.</p>
+    </li>
+
+    <li>
+      <h3>Cookie Preferences Management</h3>
+      <p>Our website provides a preference center where you can customize cookie settings, enabling or disabling various categories except essentials.</p>
+    </li>
+
+    <li>
+      <h3>Security of Cookie Data</h3>
+      <p>Cookies do not store personal data except as necessary and are transmitted securely. We implement measures to prevent unauthorized access or misuse.</p>
+    </li>
+
+    <li>
+      <h3>Children and Cookies</h3>
+      <p>We do not knowingly target children under 13 with cookies and take precautions to protect minors’ data privacy in compliance with applicable laws.</p>
+    </li>
+
+    <li>
+      <h3>Updating Our Cookies Policy</h3>
+      <p>We may update this policy as cookies technology evolves or regulations change, with revisions posted prominently. Your continued use implies acceptance of updates.</p>
+    </li>
+
+    <li>
+      <h3>Cookies for Functional Purposes</h3>
+      <p>Functionality cookies remember user actions or choices to provide enhanced features, like saved form information or chat preferences.</p>
+    </li>
+
+    <li>
+      <h3>Cookies for Security</h3>
+      <p>Security cookies help detect and prevent fraudulent activities, unauthorized logins, and protect sensitive data from attacks.</p>
+    </li>
+
+    <li>
+      <h3>Cookies and Social Media</h3>
+      <p>Some cookies enable social media sharing and interaction embedded on our site, connecting your activities with social platforms under their control.</p>
+    </li>
+
+    <li>
+      <h3>Cookie Expiration and Deletion</h3>
+      <p>Cookies have expiration periods ranging from minutes to years. You can delete cookies manually or through browser settings as needed.</p>
+    </li>
+
+    <li>
+      <h3>First and Third-party Cookies</h3>
+      <p>First-party cookies belong to our website and support core functionalities. Third-party cookies come from external services used on our site.</p>
+    </li>
+
+    <li>
+      <h3>Use of Persistent Cookies</h3>
+      <p>Persistent cookies remain stored for ongoing use such as to recognize you on return visits and maintain preferences.</p>
+    </li>
+
+    <li>
+      <h3>Session Cookies</h3>
+      <p>Session cookies last only during your browsing session and are deleted once your browser closes, supporting temporary functions.</p>
+    </li>
+
+    <li>
+      <h3>How Cookies Integrate With Our Services</h3>
+      <p>Cookies harmonize backend and frontend elements to provide seamless interaction, quicker load times, and personalized content.</p>
+    </li>
+
+    <li>
+      <h3>Cookies and Legal Compliance</h3>
+      <p>We ensure cookies use aligns with international laws, including GDPR and ePrivacy Directive, respecting user consent and privacy.</p>
+    </li>
+
+    <li>
+      <h3>Cookie Policy Enforcement</h3>
+      <p>We enforce cookie policy by blocking non-essential cookies until consent is granted and respecting your preferences thereafter.</p>
+    </li>
+
+    <li>
+      <h3>How to Modify Cookie Consent</h3>
+      <p>You can update or withdraw consent anytime using our cookie preference controls linked in website footer and banners.</p>
+    </li>
+
+    <li>
+      <h3>Cookies and Data Analytics</h3>
+      <p>Data collected via cookies aids in understanding user needs, improving services, and customizing marketing strategies effectively.</p>
+    </li>
+
+    <li>
+      <h3>Cookie-related Third-party Vendors</h3>
+      <p>We work with reputable third-party vendors complying with privacy laws for cookie management, analytics, and advertising.</p>
+    </li>
+
+    <li>
+      <h3>Mobile Cookies</h3>
+      <p>Mobile browsers and apps have cookie support, and our services optimize cookie use across device types.</p>
+    </li>
+
+    <li>
+      <h3>Cookies on Integrated Platforms</h3>
+      <p>Third-party integrations like analytics or social media plugins set their own cookies governed by their policies.</p>
+    </li>
+
+    <li>
+      <h3>How We Use Cookies to Enhance Security</h3>
+      <p>Cookies help monitor suspicious behavior patterns and increase security measures for user protection.</p>
+    </li>
+
+    <li>
+      <h3>Accessibility of Cookie Information</h3>
+      <p>This cookie policy and related details are made accessible across our website to inform all users about cookie use transparently.</p>
+    </li>
+
+    <li>
+      <h3>Cookies and User Experience</h3>
+      <p>Cookies allow us to remember your preferences and login status providing a smoother and more tailored experience.</p>
+    </li>
+
+    <li>
+      <h3>Contact Information for Privacy or Cookie Concerns</h3>
+      <p>For any concerns about cookies or data privacy, contact us at the address or phone number below:</p>
+      <p><strong>Plantique Nudge Irrigation<br>
+      East 14th Street, New York, NY 10003, United States<br>
+      Phone: <a href="tel:+12125551234" style="color:#0284c7;">+1 (844) 557-9898</a><br>
+      Email: <a href="mailto:privacy@plantiquenudge.com" style="color:#0284c7;">privacy@plantiquenudge.com</a></strong></p>
+    </li>
+
+    <li>
+      <h3>Your Rights and Cookies</h3>
+      <p>You have rights to control cookies on your devices, including acceptance, rejection, and deletion, consistent with applicable laws such as GDPR and CCPA.</p>
+    </li>
+
+    <li>
+      <h3>Consequences of Disabling Cookies</h3>
+      <p>Disabling cookies may limit website functionality and personalization but will not prevent access to essential content.</p>
+    </li>
+
+    <li>
+      <h3>Cookie Policy Updates</h3>
+      <p>We may update this policy to reflect changes in technology or laws. Changes are communicated via website notifications or banners.</p>
+    </li>
+
+    <li>
+      <h3>Cookie Consent Banner</h3>
+      <p>Upon first visit, a banner requests your consent to store cookies. You can accept or decline at any time using the banner or footer link.</p>
+    </li>
+
+    <li>
+      <h3>How to Clear Browser Cookies</h3>
+      <p>Instructions to clear cookies vary by browser. We recommend periodic clearing to maintain privacy and resolve loading issues.</p>
+    </li>
+
+    <li>
+      <h3>Cookies and Targeted Advertising</h3>
+      <p>Cookies enable targeted advertising based on interests, aiding businesses to deliver more relevant ads, enhancing user experience.</p>
+    </li>
+
+    <li>
+      <h3>Cookie Control Tools</h3>
+      <p>Besides browser controls, we offer a cookie preference center to manage your choices easily anytime.</p>
+    </li>
+
+    <li>
+      <h3>Cookies and Third-party Analytics</h3>
+      <p>Third-party analytics help us measure traffic and click behavior anonymously, improving our services without identifying individual users.</p>
+    </li>
+
+    <li>
+      <h3>Cookies and Social Media Features</h3>
+      <p>Cookies facilitate social media sharing functions and interactions within our site, linking data to your social accounts for enhanced features.</p>
+    </li>
+
+    <li>
+      <h3>Cookies and Consent Withdrawal</h3>
+      <p>You may withdraw cookie consent anytime via our preference controls; this will not affect legally required cookies essential to service function.</p>
+    </li>
+
+    <li>
+      <h3>How We Store and Protect Cookie Information</h3>
+      <p>Cookie data is stored securely and managed according to strict security policies preventing unauthorized use and respecting privacy best practices.</p>
+    </li>
+
+    <li>
+      <h3>Cookie Duration and Lifespan</h3>
+      <p>Cookie lifespan varies: session cookies last for one browser session, persistent cookies can remain for months or years.</p>
+    </li>
+
+    <li>
+      <h3>Cookies and Device Types</h3>
+      <p>Cookies are compatible across devices, and our site optimizes cookie performance for desktop and mobile experiences alike.</p>
+    </li>
+
+    <li>
+      <h3>Cookie Preferences for Different Regions</h3>
+      <p>We comply with regional laws (like GDPR, CCPA) customizing cookie prompt messages and preference options according to your location.</p>
+    </li>
+
+    <li>
+      <h3>Cookies and User Experience Optimization</h3>
+      <p>Cookies help streamline navigation, reduce load times, and remember your preferred settings, improving your overall experience with our site.</p>
+    </li>
+  </ol>
+</main>
+
+<footer role="contentinfo">
+  <p class="address" aria-label="Address of Plantique Nudge Irrigation">
+    <span class="material-icons" aria-hidden="true">place</span>
+    East 14th Street, New York, NY 10003, United States
+  </p>
+  <p class="phone" aria-label="Phone number of Plantique Nudge Irrigation">
+    <span class="material-icons" aria-hidden="true">phone</span>
+    +1 (844) 557-9898
+  </p>
+</footer>
+
+<div class="cookie-consent" id="cookieConsentBanner" role="dialog" aria-live="polite" aria-label="Cookie consent">
+  <p>We use cookies to enhance your experience, analyze traffic, and provide personalized content. By clicking accept, you consent to our cookie use. You can decline or change preferences anytime.</p>
+  <div>
+    <button id="acceptCookies" aria-label="Accept cookies">Accept</button>
+    <button id="declineCookies" class="decline" aria-label="Decline cookies">Decline</button>
+  </div>
+</div>
+
+<div class="text-size-controls" role="region" aria-label="Text size controls for reading">
+  <button id="decrease-text" aria-label="Decrease text size">A−</button>
+  <button id="reset-text" aria-label="Reset text size to default">A</button>
+  <button id="increase-text" aria-label="Increase text size">A+</button>
+</div>
+
+<script>
+  // Hamburger menu toggle
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('nav');
+  hamburger.addEventListener('click', () => {
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+    hamburger.setAttribute('aria-expanded', !expanded);
+    navMenu.classList.toggle('open');
+  });
+
+  // Text size controls
+  const contentArea = document.querySelector('main');
+  let currentFontSize = 16;
+  function setFontSize(size) {
+    if (size < 12) size = 12;
+    if (size > 24) size = 24;
+    currentFontSize = size;
+    const paras = contentArea.querySelectorAll('p, li, dd, dt, h1, h2, h3, h4');
+    paras.forEach(el => el.style.fontSize = size + 'px');
+  }
+  document.getElementById('increase-text').addEventListener('click', () => {
+    setFontSize(currentFontSize + 2);
+  });
+  document.getElementById('decrease-text').addEventListener('click', () => {
+    setFontSize(currentFontSize - 2);
+  });
+  document.getElementById('reset-text').addEventListener('click', () => {
+    setFontSize(16);
+  });
+  setFontSize(16);
+
+  // Cookie consent banner
+  const cookieConsentBanner = document.getElementById('cookieConsentBanner');
+  const acceptBtn = document.getElementById('acceptCookies');
+  const declineBtn = document.getElementById('declineCookies');
+
+  function setCookie(name, value, days) {
+    const d = new Date();
+    d.setTime(d.getTime() + (days*24*60*60*1000));
+    const expires = "expires=" + d.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/;SameSite=Lax";
+  }
+
+  function getCookie(name) {
+    const cname = name + "=";
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const ca = decodedCookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i].trim();
+      if (c.indexOf(cname) === 0) {
+        return c.substring(cname.length, c.length);
+      }
+    }
+    return "";
+  }
+
+  function hideCookieBanner() {
+    cookieConsentBanner.style.display = 'none';
+  }
+
+  function initCookieConsent() {
+    const consent = getCookie('plantique_cookie_consent');
+    if(consent === "accepted" || consent === "declined") {
+      hideCookieBanner();
+    }
+  }
+
+  acceptBtn.addEventListener('click', () => {
+    setCookie('plantique_cookie_consent', 'accepted', 365);
+    hideCookieBanner();
+  });
+
+  declineBtn.addEventListener('click', () => {
+    setCookie('plantique_cookie_consent', 'declined', 365);
+    hideCookieBanner();
+  });
+
+  initCookieConsent();
+</script>
+</body>
+</html>

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Terms and Conditions - Plantique Nudge Irrigation Services</title>
+<meta name="description" content="Terms and Conditions for Plantique Nudge Irrigation Services. Please read these terms carefully before using our services." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<!-- Google Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<style>
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    background: #f4fbff;
+    color: #374151;
+    font-family: 'Inter', sans-serif;
+  }
+  body {
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  a {
+    color: #0284c7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: #0369a1;
+    outline: none;
+  }
+  img {
+    max-width: 100%;
+    border-radius: 12px;
+    display: block;
+  }
+  .container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  header {
+    background: #e0f4ff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #bae6fd;
+    box-shadow: 0 2px 6px rgba(6, 95, 161, 0.1);
+  }
+  .nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+  }
+  .logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #0369a1;
+    letter-spacing: 1.2px;
+    user-select: none;
+  }
+  nav {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+  nav a {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 4px;
+    display: inline-flex;
+    align-items: center;
+  }
+  nav a:focus-visible {
+    outline: 2px solid #0284c7;
+    outline-offset: 3px;
+  }
+  nav a.active {
+    color: #035375;
+    font-weight: 800;
+    border-bottom: 2px solid #0284c7;
+  }
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #0369a1;
+  }
+  @media (max-width: 767px) {
+    nav {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: #e0f4ff;
+      flex-direction: column;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      box-shadow: 0 2px 8px rgba(6, 95, 161, 0.15);
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+      z-index: 1001;
+      padding-bottom: 0;
+    }
+    nav.open {
+      max-height: 400px;
+      padding-bottom: 16px;
+    }
+    nav a {
+      display: block;
+      margin: 12px auto;
+      text-align: center;
+    }
+    .hamburger {
+      display: block;
+    }
+  }
+  .hero {
+    position: relative;
+    background: linear-gradient(135deg, #b0defa 0%, #0284c7 100%);
+    color: white;
+    padding: 120px 20px 150px;
+    overflow: hidden;
+    text-align: center;
+  }
+  .hero h1 {
+    font-weight: 900;
+    font-size: 3rem;
+    max-width: 900px;
+    margin: 0 auto 24px;
+    line-height: 1.1;
+    text-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  }
+  .hero p {
+    font-size: 1.5rem;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-weight: 600;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.25);
+  }
+  .btn-primary {
+    background: #0369a1;
+    color: white;
+    padding: 16px 40px;
+    font-weight: 700;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(3,105,161,0.5);
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  .btn-primary:hover, .btn-primary:focus {
+    background: #024f79;
+    transform: translateY(-4px);
+    outline: none;
+  }
+  .wave-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: translateZ(0);
+    height: 160px;
+  }
+  .wave {
+    position: relative;
+    display: block;
+    width: 200%;
+    height: 160px;
+    background: url('https://www.svgrepo.com/show/43155/waves.svg') repeat-x bottom;
+    animation: waveAnimation 15s linear infinite;
+    transform-origin: center bottom;
+    opacity: 0.6;
+  }
+  .wave2 {
+    bottom: 20px;
+    animation-duration: 20s;
+    opacity: 0.4;
+    filter: blur(2px);
+  }
+  .wave3 {
+    bottom: 40px;
+    animation-duration: 25s;
+    opacity: 0.25;
+    filter: blur(3px);
+  }
+  @keyframes waveAnimation {
+    0% { transform: translateX(0) scaleY(1); }
+    50% { transform: translateX(-25%) scaleY(1.05); }
+    100% { transform: translateX(-50%) scaleY(1); }
+  }
+  main {
+    flex-grow: 1;
+    background: white;
+    max-width: 900px;
+    margin: 0 auto 100px;
+    padding: 60px 20px 80px;
+  }
+  h2, h3 {
+    color: #0369a1;
+    font-weight: 800;
+    margin-top: 48px;
+    margin-bottom: 20px;
+  }
+  p {
+    margin-bottom: 20px;
+    text-align: justify;
+    font-weight: 400;
+    font-size: 1.05rem;
+  }
+  footer {
+    background: #0369a1;
+    color: white;
+    padding: 32px 20px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  footer .material-icons {
+    vertical-align: middle;
+    font-size: 2rem;
+    margin-right: 8px;
+    color: #ffe;
+  }
+  button:focus-visible,
+  a:focus-visible {
+    outline-offset: 3px;
+    outline-color: #0284c7;
+  }
+  .text-size-controls {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    z-index: 1100;
+  }
+  .text-size-controls button {
+    background: #0284c7;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1.25rem;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.3s ease;
+  }
+  .text-size-controls button:hover,
+  .text-size-controls button:focus-visible {
+    background: #035375;
+    outline: 2px solid #0369a1;
+  }
+  @media (max-width: 767px) {
+    .hero h1 {
+      font-size: 2.25rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header role="banner">
+  <div class="container nav-inner">
+    <div class="logo" aria-label="Plantique Nudge Irrigation Logo">Plantique Nudge Irrigation</div>
+    <button class="hamburger" aria-label="Toggle navigation menu" aria-controls="primary-navigation" aria-expanded="false">
+      <span class="material-icons">menu</span>
+    </button>
+    <nav role="navigation" aria-label="Primary navigation" id="primary-navigation">
+    <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0"aria-current="page">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Terms and Conditions</h1>
+  <p>Please read these terms carefully before using our services.</p>
+  <div class="wave-wrapper" aria-hidden="true">
+    <span class="wave"></span>
+    <span class="wave wave2"></span>
+    <span class="wave wave3"></span>
+  </div>
+</section>
+
+<main>
+<p><strong>Effective Date:</strong> August 31, 2024</p>
+
+<p>Welcome to Plantique Nudge Irrigation. These Terms and Conditions ("Terms") govern your access to and use of our website and services. By using our services, you agree to comply with and be bound by these Terms.</p>
+
+<h2>1. Acceptance of Terms</h2>
+<p>By accessing and using our website and services, you accept and agree to be bound by these Terms and our Privacy Policy. If you do not agree any of these terms, please do not use our services. These Terms set forth the entire understanding between you and us regarding the use of our services.</p>
+
+<h2>2. Description of Services</h2>
+<p>Plantique Nudge Irrigation provides smart, data-driven irrigation systems and related services to optimize water usage for agricultural needs. Services include hardware, software, consulting, installation, maintenance, and support.</p>
+
+<h2>3. User Responsibilities</h2>
+<p>You are responsible for using our services lawfully and providing accurate information when registering or transacting. You agree not to misuse services or interfere with others’ use. Account credentials must be kept confidential and secure to prevent unauthorized access.</p>
+
+<h2>4. Eligibility</h2>
+<p>Our services are intended for individuals at least 18 years old or with legal guardianship. We do not offer services to minors without parental consent. Use by unauthorized persons is prohibited.</p>
+
+<h2>5. Account Registration</h2>
+<p>Creating an account requires you to provide complete and accurate information. All account activity is your responsibility. Notify us immediately of unauthorized use or security breaches.</p>
+
+<h2>6. Payment Terms</h2>
+<p>All charges are due in full according to stated pricing. Our fees may change with notice. Failure to pay may result in service suspension or termination. We accept payments through secure methods outlined on our website.</p>
+
+<h2>7. Service Use and Limitations</h2>
+<p>You agree to use the services for lawful purposes only, respecting applicable laws. Unauthorized use, hacking, damaging infrastructure, or distributing harmful content will lead to restrictions or termination.</p>
+
+<h2>8. Intellectual Property Rights</h2>
+<p>All intellectual property related to our services remains the property of Plantique Nudge Irrigation or its licensors. You may not copy, modify, or distribute any proprietary materials without our express permission.</p>
+
+<h2>9. User Content</h2>
+<p>If you submit content to our platform, you represent it is lawful and you grant us a license to use, reproduce, and distribute it in connection with our service offerings. We reserve the right to remove content violating these terms.</p>
+
+<h2>10. Privacy Policy</h2>
+<p>Your personal data is handled per our Privacy Policy. Using our services signifies your acceptance of that policy alongside these Terms and Conditions.</p>
+
+<h2>11. Termination</h2>
+<p>We may suspend or terminate your access at our discretion if you violate these Terms or for other legitimate reasons, with or without notice.</p>
+
+<h2>12. Limitation of Liability</h2>
+<p>We are not liable for indirect, special, or consequential damages resulting from your use of our services. Our aggregate liability is limited to amounts paid for our services during the prior 12 months.</p>
+
+<h2>13. Disclaimers</h2>
+<p>Services are provided "as is" without warranties. We do not guarantee uninterrupted or error-free operations or the accuracy of information.</p>
+
+<h2>14. Indemnity</h2>
+<p>You agree to indemnify and hold us harmless from any claims, losses, or damages arising out of your breach of these Terms or misuse of services.</p>
+
+<h2>15. Governing Law</h2>
+<p>These Terms are governed by laws of the State of New York. You agree to jurisdiction in New York courts for any disputes not settled through arbitration.</p>
+
+<h2>16. Dispute Resolution</h2>
+<p>Disputes will be resolved by binding arbitration, aiming to provide an efficient alternative to litigation. Arbitration takes place in New York unless legally required otherwise.</p>
+
+<h2>17. Changes to Terms</h2>
+<p>We reserve the right to change these Terms. We will notify you of significant changes. Continued use of services after changes constitutes acceptance.</p>
+
+<h2>18. Entire Agreement</h2>
+<p>These Terms, together with our Privacy Policy and other policies, constitute the full agreement between you and Plantique Nudge Irrigation.</p>
+
+<h2>19. Severability</h2>
+<p>If any provision is invalid or unenforceable, the remainder will remain in full effect.</p>
+
+<h2>20. Waiver</h2>
+<p>Failure to enforce any right or provision does not constitute a waiver of that right.</p>
+
+<h2>21. Force Majeure</h2>
+<p>We are not liable for failure or delay due to causes beyond control such as natural disasters, acts of war, or technical failures.</p>
+
+<h2>22. Service Availability</h2>
+<p>We strive for continuous service availability but do not guarantee uninterrupted operation.</p>
+
+<h2>23. User Feedback</h2>
+<p>Any feedback you provide is non-confidential and grants us a license to use and incorporate ideas without obligation.</p>
+
+<h2>24. Third-Party Services</h2>
+<p>Our services may integrate with third-party platforms. Use is subject to third-party terms and privacy policies.</p>
+
+<h2>25. Software Updates</h2>
+<p>We may update software and services automatically to enhance performance and security without prior notice.</p>
+
+<h2>26. Intellectual Property Infringement</h2>
+<p>We respect intellectual property laws and may remove or disable access to infringing content.</p>
+
+<h2>27. Export Controls</h2>
+<p>You agree to comply with local and international export laws related to software and services use.</p>
+
+<h2>28. Tax Compliance</h2>
+<p>You are responsible for paying any applicable taxes related to your purchases or use of services.</p>
+
+<h2>29. Billing Disputes</h2>
+<p>Report any billing errors or unauthorized charges promptly for investigation and resolution.</p>
+
+<h2>30. User Conduct</h2>
+<p>Users agree not to engage in fraudulent, abusive, or illegal activities using our services.</p>
+
+<h2>31. Prohibited Content</h2>
+<p>Content that is unlawful, offensive, or violates rights is strictly prohibited and subject to removal.</p>
+
+<h2>32. Account Security</h2>
+<p>You must keep your account secure and notify us promptly of any unauthorized activity.</p>
+
+<h2>33. Notifications</h2>
+<p>We may send important updates, service notices, or marketing communications as allowed by law and user preferences.</p>
+
+<h2>34. Affiliate Links</h2>
+<p>Some links on our site may be affiliate links from which we earn commissions.</p>
+
+<h2>35. License to Use</h2>
+<p>We provide a limited, non-exclusive license for you to access and use our services in accordance with these Terms.</p>
+
+<h2>36. Suspension for Non-payment</h2>
+<p>Non-payment of fees may result in suspension or termination of your service access.</p>
+
+<h2>37. Proprietary Rights</h2>
+<p>We retain all rights, title, and interest in all intellectual property related to our services.</p>
+
+<h2>38. Support and Maintenance</h2>
+<p>Support services are provided as described and may be updated or withdrawn at our discretion.</p>
+
+<h2>39. Affiliate and Reseller Policies</h2>
+<p>Additional policies apply to users acting as affiliates or resellers; please refer to those agreements separately.</p>
+
+<h2>40. Contact Information</h2>
+<p>If you have questions regarding these Terms or your use of our services, please contact us:</p>
+<address style="font-weight: 600; color: #0369a1;">
+Plantique Nudge Irrigation<br />
+East 14th Street, New York, NY 10003, United States<br />
+Phone: <a href="tel:+12125551234" style="color:#0284c7;">+1 (844) 557-9898</a><br />
+Email: <a href="mailto:support@plantiquenudge.com" style="color:#0284c7;">support@plantiquenudge.com</a>
+</address>
+
+</main>
+
+<footer role="contentinfo">
+  <p class="address" aria-label="Address of Plantique Nudge Irrigation">
+    <span class="material-icons" aria-hidden="true">place</span>
+    East 14th Street, New York, NY 10003, United States
+  </p>
+  <p class="phone" aria-label="Phone number of Plantique Nudge Irrigation">
+    <span class="material-icons" aria-hidden="true">phone</span>
+    +1 (844) 557-9898
+  </p>
+</footer>
+
+<div class="text-size-controls" role="region" aria-label="Text size controls for reading">
+  <button id="decrease-text" aria-label="Decrease text size">A−</button>
+  <button id="reset-text" aria-label="Reset text size to default">A</button>
+  <button id="increase-text" aria-label="Increase text size">A+</button>
+</div>
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('nav');
+  hamburger.addEventListener('click', () => {
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+    hamburger.setAttribute('aria-expanded', !expanded);
+    navMenu.classList.toggle('open');
+  });
+
+  const contentArea = document.querySelector('main');
+  let currentFontSize = 16;
+  function setFontSize(size) {
+    if (size < 12) size = 12;
+    if (size > 24) size = 24;
+    currentFontSize = size;
+    const paras = contentArea.querySelectorAll('p, li, dd, dt, h1, h2, h3, h4');
+    paras.forEach(el => el.style.fontSize = size + 'px');
+  }
+  document.getElementById('increase-text').addEventListener('click', () => {
+    setFontSize(currentFontSize + 2);
+  });
+  document.getElementById('decrease-text').addEventListener('click', () => {
+    setFontSize(currentFontSize - 2);
+  });
+  document.getElementById('reset-text').addEventListener('click', () => {
+    setFontSize(16);
+  });
+  setFontSize(16);
+</script>
+</body>
+</html>
+

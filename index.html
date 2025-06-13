@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Plantique Nudge Irrigation Services</title>
+<meta name="description" content="Plantique Nudge Irrigation - Innovative sustainable irrigation solutions for modern agriculture. Precision watering with smart tech and nudge principles." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<!-- Google Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<style>
+  /* Reset and base */
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    background: #f4fbff;
+    color: #374151; /* neutral gray dark */
+    font-family: 'Inter', sans-serif;
+  }
+  body {
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  a {
+    color: #0284c7; /* watery blue */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: #0369a1;
+  }
+  img {
+    max-width: 100%;
+    border-radius: 12px;
+    display: block;
+  }
+  /* Container */
+  .container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  /* Header */
+  header {
+    background: #e0f4ff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #bae6fd;
+    box-shadow: 0 2px 6px rgba(6, 95, 161, 0.1);
+  }
+.nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+  }
+  .logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #0369a1;
+    letter-spacing: 1.2px;
+    user-select: none;
+  }
+ /* Navigation changed from ul>li to direct anchors */
+  nav {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+  nav a {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 4px;
+    display: inline-flex;
+    align-items: center;
+  }
+  nav a:focus {
+    outline: 2px solid #0284c7;
+    outline-offset: 3px;
+  }
+ /* Navigation changed from ul>li to direct anchors */
+  nav {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+  nav a {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 4px;
+    display: inline-flex;
+    align-items: center;
+  }
+  nav a:focus {
+    outline: 2px solid #0284c7;
+    outline-offset: 3px;
+  }
+    nav.open {
+      max-height: 360px;
+      padding-bottom: 16px;
+    }
+    nav a {
+      display: block;
+      margin: 12px auto;
+      text-align: center;
+    }
+    .hamburger {
+      display: block;
+    }
+  
+  /* Hero Section with watery wave effect */
+  .hero {
+    position: relative;
+    background: linear-gradient(135deg, #b0defa 0%, #0284c7 100%);
+    color: white;
+    padding: 100px 20px 150px;
+    overflow: hidden;
+    text-align: center;
+  }
+  .hero h1 {
+    font-weight: 800;
+    font-size: 3rem;
+    max-width: 900px;
+    margin: 0 auto 24px;
+    line-height: 1.1;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }
+  .hero p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-weight: 500;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  }
+  /* Call to action button */
+  .btn-primary {
+    background: #0369a1;
+    color: white;
+    padding: 16px 32px;
+    font-weight: 700;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(3,105,161,0.5);
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  .btn-primary:hover, .btn-primary:focus {
+    background: #035375;
+    transform: translateY(-3px);
+    outline: none;
+  }
+  /* Wave background animation */
+  .wave-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: translateZ(0);
+  }
+  .wave {
+    position: relative;
+    display: block;
+    width: 200%;
+    height: 150px;
+    background: url('https://www.svgrepo.com/show/43155/waves.svg') repeat-x bottom;
+    animation: waveAnimation 15s linear infinite;
+    transform-origin: center bottom;
+  }
+  .wave.wave2 {
+    bottom: 15px;
+    animation-duration: 20s;
+    opacity: 0.6;
+    filter: blur(2px);
+  }
+  .wave.wave3 {
+    bottom: 30px;
+    animation-duration: 25s;
+    opacity: 0.4;
+    filter: blur(3px);
+  }
+  @keyframes waveAnimation {
+    0% { transform: translateX(0) scaleY(1); }
+    50% { transform: translateX(-25%) scaleY(1.05); }
+    100% { transform: translateX(-50%) scaleY(1); }
+  }
+  /* Main content */
+  main {
+    flex-grow: 1;
+    background: white;
+    padding: 60px 0 80px;
+  }
+  /* Articles grid for desktop */
+  .articles {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 64px;
+    margin-bottom: 80px;
+  }
+  @media (min-width: 1024px) {
+    .articles {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px;
+    }
+  }
+  .article-card {
+    background: #f9fafb;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgb(3 105 161 / 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .article-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    flex-shrink: 0;
+  }
+  .article-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #0369a1;
+  }
+  .article-card p {
+    color: #4b5563;
+    flex-grow: 1;
+  }
+  /* Gallery Section */
+  .gallery {
+    max-width: 1200px;
+    margin: 0 auto 64px;
+  }
+  .gallery h3 {
+    color: #0369a1;
+    font-weight: 800;
+    font-size: 2rem;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+  }
+  @media (max-width: 1023px) {
+    .gallery-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 640px) {
+    .gallery-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .gallery-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(3, 105, 161, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  .gallery-grid img:hover, .gallery-grid img:focus {
+    outline: none;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(3, 105, 161, 0.25);
+  }
+  /* Pricing section */
+  .pricing {
+    background: #e0f4ff;
+    padding: 60px 20px 80px;
+    border-radius: 20px;
+    max-width: 1200px;
+    margin: 0 auto 100px;
+  }
+  .pricing h2 {
+    text-align: center;
+    font-weight: 800;
+    font-size: 2.5rem;
+    color: #035375;
+    margin-bottom: 48px;
+  }
+  .price-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  @media (min-width: 768px) {
+    .price-cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .price-card {
+    background: white;
+    border: 2px solid #0284c7;
+    border-radius: 16px;
+    padding: 32px 28px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(3, 105, 161, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .price-card h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    color: #0369a1;
+  }
+  .price-amount {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0284c7;
+    margin-bottom: 20px;
+  }
+  .price-desc {
+    font-size: 1rem;
+    color: #475569;
+    margin-bottom: 32px;
+  }
+  .price-btn {
+    background: #0284c7;
+    color: #ffffff;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+  .price-btn:hover, .price-btn:focus {
+    background: #0369a1;
+    outline: none;
+  }
+  /* Disclaimer */
+  .disclaimer {
+    background: #fef3c7;
+    border: 1px solid #fde68a;
+    border-radius: 12px;
+    padding: 24px;
+    max-width: 920px;
+    margin: 0 auto 80px;
+    color: #92400e;
+    font-size: 1rem;
+  }
+  .disclaimer h4 {
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  /* Customer Satisfaction */
+  .customer-sat {
+    background: #dbeafe;
+    padding: 60px 20px;
+    border-radius: 20px;
+    max-width: 1200px;
+    margin: 0 auto 100px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(3,105,161,0.2);
+  }
+  .customer-sat h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    color: #0369a1;
+  }
+  .customer-sat p {
+    font-weight: 500;
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.25rem;
+    color: #1e293b;
+  }
+  /* Address Footer */
+  footer {
+    background: #0369a1;
+    color: white;
+    padding: 32px 20px;
+    text-align: center;
+  }
+  footer .address {
+    font-weight: 600;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  /* Icon styling for material icons */
+  .material-icons {
+    vertical-align: middle;
+    font-size: 2rem;
+    margin-right: 6px;
+    color: #0369a1;
+  }
+  /* Accessibility */
+  button:focus-visible, a:focus-visible {
+    outline-offset: 2px;
+  }
+  /* Text resize controls */
+  .text-size-controls {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    z-index: 1100;
+  }
+  .text-size-controls button {
+    background: #0284c7;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1.25rem;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .text-size-controls button:focus-visible {
+    outline: 2px solid #0369a1;
+  }
+  /* Content text scaling convenience */
+  #content-area p, #content-area li {
+    font-size: 1rem;
+  }
+  /* Responsive text size adjustment */
+  @media (max-width: 767px) {
+    .hero h1 {
+      font-size: 2.25rem;
+    }
+    .btn-primary {
+      font-size: 1rem;
+      padding: 14px 28px;
+    }
+  }
+</style>
+</head>
+<body>
+<header role="banner">
+  <div class="container nav-inner">
+    <div class="logo" aria-label="Plantique Nudge Irrigation Logo">Plantique Nudge Irrigation</div>
+     <nav role="navigation" aria-label="Primary navigation" id="primary-navigation">
+     <a href="index.html" tabindex="0"aria-current="page">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero" id="home">
+    <h1>Innovative Irrigation Solutions for Sustainable Agriculture</h1>
+    <p>Plantique Nudge Irrigation makes watering smarter, precise, and greener using cutting-edge nudge theory and smart irrigation technology.</p>
+    <button class="btn-primary" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})" aria-label="Explore our irrigation services">Explore Our Services</button>
+    <div class="wave-wrapper" aria-hidden="true">
+      <span class="wave"></span>
+      <span class="wave wave2"></span>
+      <span class="wave wave3"></span>
+    </div>
+  </section>
+
+  <section id="content-area" class="container" style="max-width: 1200px;">
+    <h2 style="text-align:center; margin-bottom:48px; font-weight:800; font-size:2rem; color:#0369a1;">About Plantique Nudge Irrigation</h2>
+    <article style="margin-bottom:64px;">
+      <p>Plantique Nudge Irrigation integrates behavioral science and smart water management technologies to revolutionize conventional irrigation practices. With over a decade of expertise, we deliver precision watering systems that minimize water waste, enhance crop yield, and promote sustainable farming practices designed for the modern agricultural ecosystem.</p>
+      
+      <p>Our solutions empower farmers by implementing underlying nudge principles that gently encourage optimal watering behavior supported through IoT devices, soil sensors, and weather-adaptive algorithms. This approach reduces water consumption by up to 40%, lowers energy costs, and helps preserve vital water resources for future generations.</p>
+
+      <img src="p4.png" alt="Photograph of a smart irrigation system installed in a lush green agricultural field with sensors and drip irrigation tubes" loading="lazy" />
+    </article>
+    <article style="margin-bottom:64px;">
+      <h3 style="color:#0369a1; margin-bottom: 16px;">How Our Nudge Irrigation Technology Works</h3>
+      <p>Our patented nudge irrigation system uses advanced soil moisture sensors combined with intelligent water valves to automate precise watering schedules tailored to the specific needs of your crops and soil type. The system collects real-time data and adjusts irrigation dynamically, making on-demand watering decisions that reduce runoff and overwatering.</p>
+
+      <p>The system includes a user-friendly dashboard accessible through mobile and desktop platforms, providing farmers with actionable insights, water usage analytics, scheduled alerts, and manual override capabilities. Our technology ensures that plants receive exactly the amount of water they need - not too little, not too much.</p>
+
+      <img src="p1.png" alt="Screenshot of the Plantique Nudge Irrigation dashboard showing soil moisture data and water distribution controls" loading="lazy" />
+    </article>
+
+    <article style="margin-bottom:64px;">
+      <h3 style="color:#0369a1; margin-bottom:16px;">Benefits of Using Plantique Nudge Irrigation</h3>
+      <ul style="list-style-type: disc; margin-left: 24px; color: #475569;">
+        <li>Efficient water conservation tailored to precise plant needs.</li>
+        <li>Reduced energy consumption with adaptive pump controls.</li>
+        <li>Enhanced crop health, minimizing drought stress.</li>
+        <li>Improved soil quality via controlled moisture levels.</li>
+        <li>Accessible monitoring with real-time alerts and historical data.</li>
+        <li>Increased yield and quality resulting from optimized irrigation.</li>
+      </ul>
+      <img src="p6.png" alt="Healthy crop field showing vibrant plants irrigated using Plantique Nudge smart irrigation technology" loading="lazy" />
+    </article>
+    <article style="margin-bottom:64px;">
+      <h3 style="color:#0369a1; margin-bottom:16px;">Customer Testimonials</h3>
+      <blockquote style="font-style: italic; background: #e0f4ff; border-left: 4px solid #0369a1; padding: 16px 24px; border-radius: 8px; color:#1e293b;">
+        "Plantique's nudge irrigation system completely transformed our farm's water usage. We now save water and energy while our crops are healthier than ever before." - John P., Upstate New York farmer
+      </blockquote>
+      <blockquote style="font-style: italic; background: #e0f4ff; border-left: 4px solid #0369a1; padding: 16px 24px; border-radius: 8px; margin-top: 24px; color:#1e293b;">
+        "The smart dashboard is extremely intuitive and gives me peace of mind knowing my irrigation is working optimally without guesswork." - Maria G., California vineyard manager
+      </blockquote>
+      <img src="p3.png" alt="Two happy farmers inspecting smart irrigation devices in an open field" loading="lazy" />
+    </article>
+
+      <section id="services" class="container" style="max-width: 1200px; margin-bottom: 80px;">
+    <h2 style="color:#0369a1; font-weight: 800; font-size: 2rem; margin-bottom: 48px; text-align: center;">Our Irrigation Services</h2>
+    <div class="articles">
+      <article class="article-card" tabIndex="0" aria-label="Soil Moisture Sensor Installation Service">
+        <img src="s1.png" alt="Close up of soil moisture sensor installed in soil field with drip irrigation tubes around" />
+        <h3>Soil Moisture Sensor Installation</h3>
+        <p>Custom installation of soil moisture sensors for real-time crop soil analysis to optimize irrigation schedules and water distribution.</p>
+      </article>
+      <article class="article-card" tabIndex="0" aria-label="Smart Irrigation System Setup">
+        <img src="s2.png" alt="Technician installing smart irrigation system control units in a lush agricultural farm" />
+        <h3>Smart Irrigation System Setup</h3>
+        <p>Comprehensive setup of smart valves and automated irrigation control units integrated with weather and soil analytics.</p>
+      </article>
+      <article class="article-card" tabIndex="0" aria-label="Dashboard and Monitoring Software">
+        <img src="s3.png" alt="Screenshot of Plantique dashboard showing water usage graphs and control panel" />
+        <h3>Dashboard & Monitoring Software</h3>
+        <p>Access our user-friendly dashboard featuring detailed reports, alerts, and remote irrigation control for convenient farm water management.</p>
+      </article>
+      <article class="article-card" tabIndex="0" aria-label="Customized Nudge Irrigation Consulting">
+        <img src="s4.png" alt="Consultant discussing irrigation plan with farmers in greenhouse" />
+        <h3>Customized Nudge Irrigation Consulting</h3>
+        <p>Expert consultation and tailored nudge irrigation design focused on reducing water waste while maximizing crop health and productivity.</p>
+      </article>
+      <article class="article-card" tabIndex="0" aria-label="Maintenance & Support">
+        <img src="s5.png" alt="Technician performing maintenance check on irrigation system pipes and electronics" />
+        <h3>Maintenance & Support</h3>
+        <p>Reliable and timely maintenance plans ensuring all irrigation components operate flawlessly throughout the season.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="pricing" class="pricing" aria-label="Irrigation Service Pricing">
+    <h2>Service Pricing Plans</h2>
+    <div class="price-cards">
+      <div class="price-card" tabIndex="0" aria-label="Basic Irrigation Package pricing">
+        <h3>Basic Irrigation Package</h3>
+        <div class="price-amount">$499</div>
+        <div class="price-desc">Ideal for small farms - includes soil moisture sensor & manual dashboard control</div>
+        <button class="price-btn" aria-label="Choose Basic Irrigation Package">Select Plan</button>
+      </div>
+      <div class="price-card" tabIndex="0" aria-label="Standard Smart Irrigation Package pricing">
+        <h3>Standard Smart Irrigation Package</h3>
+        <div class="price-amount">$1299</div>
+        <div class="price-desc">Includes sensor installation, automated valve controls, and full dashboard access</div>
+        <button class="price-btn" aria-label="Choose Standard Smart Irrigation Package">Select Plan</button>
+      </div>
+      <div class="price-card" tabIndex="0" aria-label="Premium Nudge Irrigation Package pricing">
+        <h3>Premium Nudge Irrigation Package</h3>
+        <div class="price-amount">$2499</div>
+        <div class="price-desc">Advanced system with nudge consulting, multiple sensors, priority support, and maintenance</div>
+        <button class="price-btn" aria-label="Choose Premium Nudge Irrigation Package">Select Plan</button>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- Gallery Section Replaces FAQ -->
+    <section class="gallery" aria-label="Image gallery of Plantique Nudge Irrigation">
+      <h3>Gallery</h3>
+      <div class="gallery-grid">
+        <img src="g1.png" alt="Close-up photo of a modern irrigation controller unit with display and controls" tabindex="0" />
+        <img src="g2.png" alt="Drip irrigation pipes running through rows of healthy green crops in a farm field" tabindex="0" />
+        <img src="g3.png" alt="Farm technician using a tablet to check soil moisture sensors placed in the field" tabindex="0" />
+        <img src="g4.png" alt="Close-up macro photo of water droplets on lush plant leaves in the morning sunlight" tabindex="0" />
+        <img src="g5.png" alt="Automated irrigation system installed inside a commercial greenhouse with potted plants" tabindex="0" />
+        <img src="g6.png" alt="Soil moisture sensor device connected to drip line system in fertile soil" tabindex="0" />
+      </div>
+    </section>
+
+    <!-- Additional Content Sections for More Content -->
+    <article style="margin-bottom:64px;">
+      <h3 style="color:#0369a1; margin-bottom:16px;">Technology Behind Nudge Irrigation</h3>
+      <p>At the core of Plantique Nudge Irrigation lies an intelligent mesh of IoT devices seamlessly integrated with behavioral science. Our system employs cutting-edge soil moisture sensors and weather stations paired with automated micro-valves to create a dynamic irrigation network.</p>
+      <p>Using machine learning algorithms, the system predicts plant water needs and environmental changes, nudging farmers with actionable prompts and automated adjustments to improve efficiency. Data is securely stored and processed with end-to-end encryption and regular firmware updates ensuring system robustness.</p>
+      <p>The technology supports modular expansion facilitating easy integration with other smart farm equipment such as drones, nutrient delivery systems, and crop monitoring cameras. This future-proof design guarantees adaptability for evolving farm management practices.</p>
+      <img src="p5.png" alt="Illustration showing connected IoT devices and smart sensors used in irrigation technology" loading="lazy" />
+    </article>
+    <article style="margin-bottom:64px;">
+      <h3 style="color:#0369a1; margin-bottom:16px;">Case Studies: Real World Success Stories</h3>
+      <p>Farm Alpha in California implemented our Premium Nudge Irrigation Package and reported a 35% reduction in water usage within the first 6 months while achieving an 18% increase in crop yield. Their vineyard benefited from more consistent soil moisture levels leading to higher grape quality.</p>
+      <p>Farm Beta in Texas utilized our consulting and sensor installation to optimize irrigation across 200 acres of diversified vegetable crops. The farm experienced less fungal disease due to reduced overwatering and noted significant savings on energy consumption with smart pump controls.</p>
+      <p>City Garden Cooperative in New York installed our smart irrigation setup in community greenhouses, enabling urban gardeners to maintain healthy plants with minimal water use and manual intervention, boosting local food production sustainably.</p>
+      <img src="p2.png" alt="Successful agricultural fields managed using Plantique nudge irrigation technology shown in a case study" loading="lazy" />
+    </article>
+    <article style="margin-bottom:64px;">
+      <h3 style="color:#0369a1; margin-bottom:16px;">Sustainability Impact</h3>
+      <p>Water scarcity is a pressing global challenge, and agricultural irrigation accounts for nearly 70% of freshwater use worldwide. Plantique Nudge Irrigation enables farms to drastically reduce water waste, contributing to global water conservation efforts.</p>
+      <p>Our technology not only conserves water but also reduces carbon emissions by optimizing energy consumption tied to water pumping and distribution systems. Farms equipped with our solutions demonstrate significant improvement in soil ecosystem health supporting biodiversity and resilience.</p>
+      <p>We are proud partners in several sustainability initiatives promoting regenerative agriculture and water stewardship, empowering farmers with the tools to grow food responsibly for future generations.</p>
+      <img src="p7.png" alt="Symbolic image representing eco-friendly and sustainable irrigation practices with water droplets and leaves" loading="lazy" />
+    </article>
+    <article style="margin-bottom:64px;">
+      <h3 style="color:#0369a1; margin-bottom:16px;">Installation Process: What to Expect</h3>
+      <p>Our installation process is designed to be smooth and minimally disruptive. It begins with a comprehensive site survey where our technicians assess soil types, crop varieties, water sources, and existing irrigation infrastructure.</p>
+      <p>Following this, we develop a bespoke irrigation layout incorporating sensor placement, control valves, and communication nodes. Once the design is approved, installation is scheduled, and our specialists deploy hardware, configure software, and conduct quality tests to ensure system accuracy.</p>
+      <p>Post-installation, we provide training and ongoing support. The system remains scalable to accommodate farm growth or changing crop patterns, assuring lasting value and adaptability.</p>
+      <img src="p8.png" alt="Photo showing technicians installing irrigation hardware and setting up control software in a field" loading="lazy" />
+    </article>
+
+  </section>
+
+
+  <section class="disclaimer" aria-label="Disclaimer">
+    <h4>Disclaimer</h4>
+    <p>Plantique Nudge Irrigation systems are designed to assist and optimize irrigation practices using data-driven technology and behavioral principles. However, the system’s effectiveness depends on accurate installation and environmental conditions. We recommend consulting with our experts to tailor irrigation solutions suited for your specific agricultural needs. Plantique assumes no liability for damages caused by misuse, mechanical failures, or environmental factors beyond our control.</p>
+  </section>
+
+  <section class="customer-sat" aria-label="Customer Satisfaction and Feedback">
+    <h2>Increasing Customer Satisfaction is Our Priority</h2>
+    <p>We are committed to delivering the highest quality irrigation solutions that not only conserve precious water resources but also enhance your agricultural yield and profitability. Our continuous customer support, innovative technology, and transparent service plans ensure that your satisfaction grows season after season.</p>
+  </section>
+</main>
+
+<footer role="contentinfo">
+  <p class="address" aria-label="Address of Plantique Nudge Irrigation">
+    <span class="material-icons" aria-hidden="true">place</span>
+    East 14th Street, New York, NY 10003, United States
+  </p>
+</footer>
+
+<div class="text-size-controls" role="region" aria-label="Text size controls for reading">
+  <button id="decrease-text" aria-label="Decrease text size">A−</button>
+  <button id="reset-text" aria-label="Reset text size to default">A</button>
+  <button id="increase-text" aria-label="Increase text size">A+</button>
+</div>
+
+<script>
+  // Responsive nav hamburger toggle
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('nav ul');
+  hamburger.addEventListener('click', () => {
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+    hamburger.setAttribute('aria-expanded', !expanded);
+    navMenu.classList.toggle('open');
+  });
+
+  // Text resize controls for readability
+  const contentArea = document.getElementById('content-area');
+  let currentFontSize = 16; // base 16px
+
+  function setFontSize(size) {
+    if (size < 12) size = 12;
+    if (size > 24) size = 24;
+    currentFontSize = size;
+    // Apply font size to paragraph and list text inside content-area
+    const paras = contentArea.querySelectorAll('p, li, dd, dt');
+    paras.forEach(el => el.style.fontSize = size + 'px');
+  }
+
+  document.getElementById('increase-text').addEventListener('click', () => {
+    setFontSize(currentFontSize + 2);
+  });
+  document.getElementById('decrease-text').addEventListener('click', () => {
+    setFontSize(currentFontSize - 2);
+  });
+  document.getElementById('reset-text').addEventListener('click', () => {
+    setFontSize(16);
+  });
+
+  // Initialize default font size
+  setFontSize(16);
+</script>
+</body>
+</html>
+

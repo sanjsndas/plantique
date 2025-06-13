@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy - Plantique Nudge Irrigation Services</title>
+<meta name="description" content="Comprehensive Privacy Policy for Plantique Nudge Irrigation Services. Learn about data collection, protection, and your rights." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet" />
+<!-- Google Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<style>
+  /* Reset and base */
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    background: #f4fbff;
+    color: #374151; /* Neutral text color */
+    font-family: 'Inter', sans-serif;
+  }
+  body {
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  a {
+    color: #0284c7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: #0369a1;
+    outline: none;
+  }
+  img {
+    max-width: 100%;
+    border-radius: 12px;
+    display: block;
+  }
+  .container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  header {
+    background: #e0f4ff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #bae6fd;
+    box-shadow: 0 2px 6px rgba(6, 95, 161, 0.1);
+  }
+  .nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+  }
+  .logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #0369a1;
+    letter-spacing: 1.2px;
+    user-select: none;
+  }
+  nav {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+  nav a {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 4px;
+    display: inline-flex;
+    align-items: center;
+  }
+  nav a:focus-visible {
+    outline: 2px solid #0284c7;
+    outline-offset: 3px;
+  }
+  nav a.active {
+    color: #035375;
+    font-weight: 800;
+    border-bottom: 2px solid #0284c7;
+  }
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #0369a1;
+  }
+  @media (max-width: 767px) {
+    nav {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: #e0f4ff;
+      flex-direction: column;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      box-shadow: 0 2px 8px rgba(6, 95, 161, 0.15);
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+      z-index: 1001;
+      padding-bottom: 0;
+    }
+    nav.open {
+      max-height: 400px;
+      padding-bottom: 16px;
+    }
+    nav a {
+      display: block;
+      margin: 12px auto;
+      text-align: center;
+    }
+    .hamburger {
+      display: block;
+    }
+  }
+  /* Hero Section */
+  .hero {
+    position: relative;
+    background: linear-gradient(135deg, #b0defa 0%, #0284c7 100%);
+    color: white;
+    padding: 120px 20px 150px;
+    overflow: hidden;
+    text-align: center;
+  }
+  .hero h1 {
+    font-weight: 900;
+    font-size: 3rem;
+    max-width: 900px;
+    margin: 0 auto 24px;
+    line-height: 1.1;
+    text-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  }
+  .hero p {
+    font-size: 1.5rem;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-weight: 600;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.25);
+  }
+  .btn-primary {
+    background: #0369a1;
+    color: white;
+    padding: 16px 40px;
+    font-weight: 700;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(3,105,161,0.5);
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  .btn-primary:hover, .btn-primary:focus {
+    background: #024f79;
+    transform: translateY(-4px);
+    outline: none;
+  }
+  /* Wave background animation */
+  .wave-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: translateZ(0);
+    height: 160px;
+  }
+  .wave {
+    position: relative;
+    display: block;
+    width: 200%;
+    height: 160px;
+    background: url('https://www.svgrepo.com/show/43155/waves.svg') repeat-x bottom;
+    animation: waveAnimation 15s linear infinite;
+    transform-origin: center bottom;
+    opacity: 0.6;
+  }
+  .wave2 {
+    bottom: 20px;
+    animation-duration: 20s;
+    opacity: 0.4;
+    filter: blur(2px);
+  }
+  .wave3 {
+    bottom: 40px;
+    animation-duration: 25s;
+    opacity: 0.25;
+    filter: blur(3px);
+  }
+  @keyframes waveAnimation {
+    0% { transform: translateX(0) scaleY(1); }
+    50% { transform: translateX(-25%) scaleY(1.05); }
+    100% { transform: translateX(-50%) scaleY(1); }
+  }
+  /* Main content */
+  main {
+    flex-grow: 1;
+    background: white;
+    max-width: 900px;
+    margin: 0 auto 100px;
+    padding: 60px 20px 80px;
+  }
+  h2, h3, h4 {
+    color: #0369a1;
+    font-weight: 800;
+    margin-top: 48px;
+    margin-bottom: 20px;
+  }
+  h4 {
+    font-size: 1.25rem;
+  }
+  p {
+    margin-bottom: 20px;
+    text-align: justify;
+    font-weight: 400;
+    font-size: 1.05rem;
+  }
+  ul, ol {
+    padding-left: 24px;
+    margin-bottom: 24px;
+    font-size: 1.05rem;
+  }
+  li {
+    margin-bottom: 12px;
+  }
+  /* Footer */
+  footer {
+    background: #0369a1;
+    color: white;
+    padding: 32px 20px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  footer .material-icons {
+    vertical-align: middle;
+    font-size: 2rem;
+    margin-right: 8px;
+    color: #ffe;
+  }
+  /* Accessibility outlines */
+  button:focus-visible,
+  a:focus-visible {
+    outline-offset: 3px;
+    outline-color: #0284c7;
+  }
+  /* Text resize controls */
+  .text-size-controls {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    z-index: 1100;
+  }
+  .text-size-controls button {
+    background: #0284c7;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1.25rem;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.3s ease;
+  }
+  .text-size-controls button:hover,
+  .text-size-controls button:focus-visible {
+    background: #035375;
+    outline: 2px solid #0369a1;
+  }
+  /* Responsive */
+  @media (max-width: 767px) {
+    .hero h1 {
+      font-size: 2.25rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header role="banner">
+  <div class="container nav-inner">
+    <div class="logo" aria-label="Plantique Nudge Irrigation Logo">Plantique Nudge Irrigation</div>
+    <button class="hamburger" aria-label="Toggle navigation menu" aria-controls="primary-navigation" aria-expanded="false">
+      <span class="material-icons">menu</span>
+    </button>
+    <nav role="navigation" aria-label="Primary navigation" id="primary-navigation">
+    <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0"aria-current="page">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Privacy Policy</h1>
+  <p>Your privacy and data protection are of utmost importance to us.</p>
+  <div class="wave-wrapper" aria-hidden="true">
+    <span class="wave"></span>
+    <span class="wave wave2"></span>
+    <span class="wave wave3"></span>
+  </div>
+</section>
+
+<main>
+  <p><strong>Effective date:</strong> August 31, 2024</p>
+
+  <p>Plantique Nudge Irrigation ("we", "our", "us") is committed to protecting your privacy. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you visit our website and use our services. We encourage you to read this policy carefully to understand how we handle your data.</p>
+
+  <h2>1. Information We Collect</h2>
+
+  <h3>1.1 Personal Data You Provide</h3>
+  <p>You may provide us with personal data such as your name, contact details, billing information, and payment data when you interact with our services, register accounts, or contact customer support.</p>
+
+  <h3>1.2 Data Collected Automatically</h3>
+  <p>We automatically collect data such as IP addresses, device types, browser information, and browsing behavior for analytics and security purposes.</p>
+
+  <h3>1.3 Cookies & Tracking Technologies</h3>
+  <p>We use cookies and similar technologies to personalize your experience, analyze traffic, and provide functionality.</p>
+
+  <h2>2. Use of Your Information</h2>
+  <p>We use your data to provide and improve our services, process transactions, communicate with you, for marketing, and to ensure security.</p>
+
+  <h2>3. How We Share Your Information</h2>
+  <p>Your data may be shared with trusted partners for service delivery, legal compliance, or with your consent.</p>
+
+  <h2>4. Cookies Policy</h2>
+  <p>Details on the types of cookies we use and how you can control them through browser settings or our preference center.</p>
+
+  <h2>5. Data Security</h2>
+  <p>We employ industry best practices including encryption, access controls, and regular audits to secure your information.</p>
+
+  <h2>6. Your Rights</h2>
+  <p>Depending on your jurisdiction, you have rights such as access, correction, deletion, and objection to data processing.</p>
+
+  <h2>7. Children’s Privacy</h2>
+  <p>Our services are not directed to children under 13, and we do not intentionally collect their data.</p>
+
+  <h2>8. International Transfers</h2>
+  <p>Data may be transferred internationally with appropriate safeguards in place.</p>
+
+  <h2>9. Updates to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time; you will be notified of material changes.</p>
+
+  <h2>10. Contact Us</h2>
+  <address>
+    <strong>Plantique Nudge Irrigation</strong><br>
+    East 14th Street, New York, NY 10003, United States<br>
+    Phone: <a href="tel:+12125551234" style="color:#0284c7;">+1 (844) 557-9898</a><br>
+    Email: <a href="mailto:privacy@plantiquenudge.com" style="color:#0284c7;">privacy@plantiquenudge.com</a>
+  </address>
+
+  <h2>11–50. Detailed Privacy Topics Explained</h2>
+
+  <h3>11. Information Accuracy and Updates</h3>
+  <p>We encourage users to provide accurate personal information and update it regularly to ensure effective communication and service delivery. Inaccurate data may limit your access to services or result in communication issues.</p>
+
+  <h3>12. Use of Aggregated Data</h3>
+  <p>Aggregated data is anonymized information compiled from multiple sources to analyze general trends. This data does not reveal personal identities and helps us improve our platform and user experience.</p>
+
+  <h3>13. Data Retention Policies</h3>
+  <p>We retain personal data only for as long as necessary to fulfill business objectives or comply with legal requirements. Afterward, data is securely deleted or anonymized.</p>
+
+  <h3>14. Profiling Restrictions</h3>
+  <p>Automated profiling that significantly affects users requires explicit consent; we do not engage in such profiling without providing clear information and obtaining your approval.</p>
+
+  <h3>15. Use of Biometric Data</h3>
+  <p>We do not collect biometric data such as fingerprints or facial recognition unless you proactively provide it, and only under explicit consent and strict security.</p>
+
+  <h3>16. Data Protection Officer Contact</h3>
+  <p>Our appointed Data Protection Officer manages inquiries related to data privacy. Contact details are provided in our contact section for your convenience.</p>
+
+  <h3>17. How We Handle Data Breaches</h3>
+  <p>We maintain strict security protocols to prevent breaches and have a response plan to mitigate any incidents promptly, comply with legal notifications, and protect your data.</p>
+
+  <h3>18. Security Certifications and Compliance</h3>
+  <p>Our security systems comply with international standards and certifications, ensuring that your data is protected with reliable, tested technologies.</p>
+
+  <h3>19. Cross-device Tracking Explanation</h3>
+  <p>Tracking your interactions across devices, with your consent, enables us to provide a seamless and personalized experience whether you use a smartphone, tablet, or desktop.</p>
+
+  <h3>20. Mobile Application Privacy Practices</h3>
+  <p>Our mobile apps follow strict privacy standards, with clear permissions and controls over the information collected and shared.</p>
+
+  <h3>21. Third-party Cookies and Pixels</h3>
+  <p>We may include cookies and pixels from trusted partners for analytics and advertising to offer relevant content, always respecting your privacy choices.</p>
+
+  <h3>22. How We Handle Your Payment Information</h3>
+  <p>Payment data is processed securely through authorized third parties; we never store full credit card information to safeguard your financial security.</p>
+
+  <h3>23. Encryption and Secure Payment Technologies</h3>
+  <p>All payment-related data transmissions are secured using SSL/TLS encryption to protect your transactions.</p>
+
+  <h3>24. Links to Third-party Websites and Services</h3>
+  <p>Links on our website may direct you to external sites; we recommend reviewing their privacy practices as we hold no responsibility for their content.</p>
+
+  <h3>25. Social Media Integration and Privacy</h3>
+  <p>Social media features may share data with platforms like Facebook or Twitter according to their privacy policies; you have control over your social media privacy settings.</p>
+
+  <h3>26. Behavioral Advertising Policies</h3>
+  <p>Advertising based on user behavior is conducted responsibly, with options available for opting out of targeted ads through various platforms.</p>
+
+  <h3>27. Do Not Track Signals</h3>
+  <p>We acknowledge Do Not Track browser settings, but in line with industry practices, we may not always be able to honor these signals.</p>
+
+  <h3>28. Legal Bases for Processing Personal Data</h3>
+  <p>Processing your data is based on legitimate interests, performance of contracts, consent, or compliance with legal obligations.</p>
+
+  <h3>29. How We Use Your Location Data</h3>
+  <p>With explicit permission, location data may be used to tailor services and improve user experience like scheduling irrigation optimally.</p>
+
+  <h3>30. Opt-out Mechanisms and Controls</h3>
+  <p>You may opt out of marketing communications and cookie tracking through provided preferences or by contacting us.</p>
+
+  <h3>31. Cookies Preference Center</h3>
+  <p>We offer tools for managing cookie preferences easily to respect your consent choices regarding data collection.</p>
+
+  <h3>32. Video and Audio Data Collection Policy</h3>
+  <p>Any video/audio data collected (e.g., for support or monitoring) is done with consent and handled securely.</p>
+
+  <h3>33. Data Transfer Safeguards</h3>
+  <p>Data transferred across borders is protected via contracts and security measures ensuring compliant handling.</p>
+
+  <h3>34. Impact of Privacy Policies from Partners</h3>
+  <p>Privacy policies of third-party partners may differ; we recommend reviewing their terms when interacting with partner services.</p>
+
+  <h3>35. User Account Deactivation Effects</h3>
+  <p>Deactivating your account removes access and may lead to deletion or anonymization of your personal data according to policy.</p>
+
+  <h3>36. Retention of Anonymized Data</h3>
+  <p>We may retain aggregated anonymized data indefinitely for analysis to enhance our platform and services.</p>
+
+  <h3>37. Cross-border Data Transfers</h3>
+  <p>Such transfers comply with international data protection frameworks to ensure data safety.</p>
+
+  <h3>38. Children and Family Information</h3>
+  <p>Special measures protect data of minors; our services are not targeted toward children under the applicable age.</p>
+
+  <h3>39. Privacy Shield and International Frameworks</h3>
+  <p>Where applicable, we conform to recognized international privacy agreements to safeguard your data.</p>
+
+  <h3>40. Consumer Privacy Rights under Various Jurisdictions</h3>
+  <p>You may have rights including data access, correction, deletion and objection depending on your local laws such as GDPR or CCPA.</p>
+
+  <p>We hope this comprehensive policy assists you in understanding your privacy rights and our commitment to protecting your data.</p>
+</main>
+
+<footer role="contentinfo">
+  <p class="address" aria-label="Address of Plantique Nudge Irrigation">
+    <span class="material-icons" aria-hidden="true">place</span>
+    East 14th Street, New York, NY 10003, United States
+  </p>
+  <p class="phone" aria-label="Phone number of Plantique Nudge Irrigation">
+    <span class="material-icons" aria-hidden="true">phone</span>
+    +1 (844) 557-9898
+  </p>
+</footer>
+
+<div class="text-size-controls" role="region" aria-label="Text size controls for reading">
+  <button id="decrease-text" aria-label="Decrease text size">A−</button>
+  <button id="reset-text" aria-label="Reset text size to default">A</button>
+  <button id="increase-text" aria-label="Increase text size">A+</button>
+</div>
+
+<script>
+  // Responsive nav hamburger toggle
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('nav');
+  hamburger.addEventListener('click', () => {
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+    hamburger.setAttribute('aria-expanded', !expanded);
+    navMenu.classList.toggle('open');
+  });
+
+  // Text resize controls for readability
+  const contentArea = document.querySelector('main');
+  let currentFontSize = 16; // base 16px
+
+  function setFontSize(size) {
+    if (size < 12) size = 12;
+    if (size > 24) size = 24;
+    currentFontSize = size;
+    const paras = contentArea.querySelectorAll('p, li, dd, dt, h1, h2, h3, h4');
+    paras.forEach(el => el.style.fontSize = size + 'px');
+  }
+
+  document.getElementById('increase-text').addEventListener('click', () => {
+    setFontSize(currentFontSize + 2);
+  });
+  document.getElementById('decrease-text').addEventListener('click', () => {
+    setFontSize(currentFontSize - 2);
+  });
+  document.getElementById('reset-text').addEventListener('click', () => {
+    setFontSize(16);
+  });
+
+  setFontSize(16);
+</script>
+</body>
+</html>
+
