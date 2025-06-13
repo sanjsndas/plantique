@@ -658,6 +658,50 @@ body {
   <button id="increase-text" aria-label="Increase text size">A+</button>
 </div>
 
+
+
+  <!-- Cookie Consent Footer Bar -->
+<div id="cookieConsent" style="
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #2b2b2b;
+  color: #ffffff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  z-index: 9999;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+">
+  <div style="max-width: 75%;">
+    🍪 This website uses cookies to enhance user experience. By continuing to browse, you agree to our cookie policy.
+  </div>
+  <div style="display: flex; gap: 10px;">
+    <button onclick="acceptCookies()" style="background-color: #28a745; border: none; color: white; padding: 8px 16px; border-radius: 5px; cursor: pointer;">Accept</button>
+    <button onclick="declineCookies()" style="background-color: #dc3545; border: none; color: white; padding: 8px 16px; border-radius: 5px; cursor: pointer;">Decline</button>
+  </div>
+</div>
+
+<script>
+  // Hide if previously accepted
+  if (localStorage.getItem("cookieConsent")) {
+    document.getElementById("cookieConsent").style.display = "none";
+  }
+
+  function acceptCookies() {
+    localStorage.setItem("cookieConsent", "accepted");
+    document.getElementById("cookieConsent").style.display = "none";
+  }
+
+  function declineCookies() {
+    localStorage.setItem("cookieConsent", "declined");
+    document.getElementById("cookieConsent").style.display = "none";
+  }
+</script>
+
+
 <script>
   // Responsive nav hamburger toggle
   const hamburger = document.querySelector('.hamburger');
